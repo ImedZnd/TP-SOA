@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calculPackage;
+
+service Calcule {
+      rpc add(params) returns (response);
+      rpc sub(params) returns(response);
+      rpc mult(params) returns(response);
+      rpc devid(params) returns(response);
+}
+
+message params{
+  int32 first = 1;
+  int32 second = 2;
+}
+
+message response {
+  int32 res = 1;
+}
